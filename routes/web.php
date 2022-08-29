@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Password;
 */
 
 Route::get('/', function () {
+    $obg=['Name'=>"majd emran",'Id'=>5,'Gender'=>'male'];
+
     return view('welcome');
 });
 Route::get('/show-id/{id}', function ($id) {
@@ -57,6 +59,8 @@ Route::namespace('App\Http\Controllers')->group(function()
     Route::get('trycontrol/{data}/{ag}','FirstController2@getindex');
     Route::get('landing','LandingController@getLanding');
     Auth::routes(['verify'=>true]);
+    Route::get('/redirect/{service}','SocialController@redirect');
+    Route::get('/callback/{service}','SocialController@callback');
 
 });
 Route::namespace('App\Http\Controllers')->group(function()

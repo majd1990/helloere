@@ -75,6 +75,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="row mb-6">
+                            <div class="col-md-6 offset-md-4">
+                                <a href="{{url('/redirect/facebook')}}">
+                                    signup with facebook
+                            </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

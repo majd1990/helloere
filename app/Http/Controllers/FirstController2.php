@@ -9,11 +9,9 @@ class FirstController2 extends BaseController
 {
     //
     public function getindex($data,$ag){
-        $obg=new myobj();
-
-        $obg->Name="majd emran";
-        $obg->Id=5;
-        $obg->Gender='male';
-        return view ('welcome')->with(compact($obg));
+        
+        $obg=['Name'=>"majd emran",'Id'=>5,'Gender'=>'male'];
+   
+        return view ('welcome');
     }
 }
